@@ -119,6 +119,7 @@ class OrdersController extends Controller
         $model      = $this->repo->find($route->getParameter('id'));
         $company    = $companyRepo->getModel()->first();
         $letraChica = $toPrintRepo->ultimo();
+        
         $pdf        = PDF::loadView('admin.orders.reportes', compact('model','letraChica','company'));
 
         return $pdf->stream();

@@ -178,7 +178,10 @@
 <br/>
 <hr>
 
-{!! $letraChica->descripcion !!}
+@if(!is_null($letraChica))
+  {!! $letraChica->descripcion !!}
+@endif
+
 
 
 {{--
